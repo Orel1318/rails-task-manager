@@ -1,0 +1,9 @@
+<ul>
+<% if @tasks.present? %>
+  <%@tasks.each do |t|%>
+    <li><%= link_to t.title, search_path(t)%></li>
+  <% end %>
+<% else %>
+  <%= "No hay tareas para mostrar" %>
+<% end %>
+</ul>
